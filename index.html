@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f1ea" />
+  <meta name="description" content="Bobirjon va Moxichexrabonuning nikoh to'yi — 30 sentyabr 2026, soat 19:00." />
+  <title>Bobirjon & Moxichexrabonu — To'y taklifnomasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="petals petals-a"></div>
+  <div class="petals petals-b"></div>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-card">
+        <p class="eyebrow">To'y taklifnomasi</p>
+        <div class="monogram">B <span>&</span> M</div>
+        <h1>Bobirjon <span>&</span><br />Moxichexrabonu</h1>
+        <p class="lead">Hayotimizdagi eng go'zal kunni siz bilan birga nishonlashdan mamnun bo'lamiz.</p>
+        <a class="primary-btn" href="#event">Taklifnomani ko'rish <span>↓</span></a>
+      </div>
+    </section>
+
+    <section id="event" class="section details-section">
+      <div class="section-heading">
+        <p class="eyebrow">Bizning kunimiz</p>
+        <h2>Bir umrga esda qoladigan sana</h2>
+      </div>
+
+      <div class="details-grid">
+        <article class="detail-card">
+          <div class="icon">◷</div>
+          <span>Sana</span>
+          <strong>30 sentyabr 2026</strong>
+          <small>Chorshanba</small>
+        </article>
+        <article class="detail-card">
+          <div class="icon">19</div>
+          <span>Vaqt</span>
+          <strong>19:00</strong>
+          <small>Mehmonlarni kutib olish</small>
+        </article>
+        <article class="detail-card">
+          <div class="icon">⌖</div>
+          <span>Manzil</span>
+          <strong>Buxoro</strong>
+          <small>To'y marosimi o'tkaziladigan maskan</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section countdown-section">
+      <div class="section-heading">
+        <p class="eyebrow">Kutilayotgan lahzalar</p>
+        <h2>To'yimizgacha</h2>
+      </div>
+      <div class="countdown" aria-live="polite">
+        <div><strong id="days">00</strong><span>kun</span></div>
+        <div><strong id="hours">00</strong><span>soat</span></div>
+        <div><strong id="minutes">00</strong><span>daqiqa</span></div>
+        <div><strong id="seconds">00</strong><span>soniya</span></div>
+      </div>
+    </section>
+
+    <section class="section message-section">
+      <div class="ornament">✦</div>
+      <p class="quote">“Ikki qalb, bir yo'l, bir umr.”</p>
+      <p class="message">Sizning duolaringiz va ishtirokingiz bu kunimizni yanada unutilmas qiladi.</p>
+    </section>
+
+    <section class="section location-section">
+      <div class="location-card">
+        <div>
+          <p class="eyebrow">Bizni toping</p>
+          <h2>To'y manzili</h2>
+          <p>Buxoro shahridagi marosim manzilini Yandex Maps orqali ochib ko'ring.</p>
+        </div>
+        <a class="map-btn" target="_blank" rel="noopener noreferrer" href="https://yandex.uz/maps/10330/bukhara/?ll=64.458880%2C39.767739&mode=poi&poi%5Bpoint%5D=64.457796%2C39.767761&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D198231596322&z=18.96">Yandex Maps ↗</a>
+      </div>
+    </section>
+
+    <section class="section closing-section">
+      <div class="closing-card">
+        <p class="eyebrow">Sizni kutamiz</p>
+        <h2>Bobirjon <span>&</span> Moxichexrabonu</h2>
+        <p>30.09.2026 · 19:00</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Sevgi bilan yaratilgan to'y taklifnomasi · 2026</footer>
+
+  <script>
+    const weddingDate = new Date('2026-09-30T19:00:00+05:00').getTime();
+    const pad = (n) => String(n).padStart(2, '0');
+
+    function updateCountdown() {
+      const diff = weddingDate - Date.now();
+      const values = diff > 0
+        ? {
+            days: Math.floor(diff / 86400000),
+            hours: Math.floor(diff / 3600000) % 24,
+            minutes: Math.floor(diff / 60000) % 60,
+            seconds: Math.floor(diff / 1000) % 60
+          }
+        : { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
+      document.getElementById('days').textContent = pad(values.days);
+      document.getElementById('hours').textContent = pad(values.hours);
+      document.getElementById('minutes').textContent = pad(values.minutes);
+      document.getElementById('seconds').textContent = pad(values.seconds);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
