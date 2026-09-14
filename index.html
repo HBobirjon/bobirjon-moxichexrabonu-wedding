@@ -1,123 +1,42 @@
 <!doctype html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f7f1ea" />
-  <meta name="description" content="Bobirjon va Moxichexrabonuning nikoh to'yi — 30 sentyabr 2026, soat 19:00." />
-  <title>Bobirjon & Moxichexrabonu — To'y taklifnomasi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5eee5">
+<meta name="description" content="Bobirjon & Moxichexrabonu — nikoh to'yi, 30 sentyabr 2026, 19:00, Sherbudin, Buxoro.">
+<title>Bobirjon & Moxichexrabonu — Nikoh to'yi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="petals petals-a"></div>
-  <div class="petals petals-b"></div>
-
-  <main>
-    <section class="hero section">
-      <div class="hero-card">
-        <p class="eyebrow">To'y taklifnomasi</p>
-        <div class="monogram">B <span>&</span> M</div>
-        <h1>Bobirjon <span>&</span><br />Moxichexrabonu</h1>
-        <p class="lead">Hayotimizdagi eng go'zal kunni siz bilan birga nishonlashdan mamnun bo'lamiz.</p>
-        <a class="primary-btn" href="#event">Taklifnomani ko'rish <span>↓</span></a>
-      </div>
-    </section>
-
-    <section id="event" class="section details-section">
-      <div class="section-heading">
-        <p class="eyebrow">Bizning kunimiz</p>
-        <h2>Bir umrga esda qoladigan sana</h2>
-      </div>
-
-      <div class="details-grid">
-        <article class="detail-card">
-          <div class="icon">◷</div>
-          <span>Sana</span>
-          <strong>30 sentyabr 2026</strong>
-          <small>Chorshanba</small>
-        </article>
-        <article class="detail-card">
-          <div class="icon">19</div>
-          <span>Vaqt</span>
-          <strong>19:00</strong>
-          <small>Mehmonlarni kutib olish</small>
-        </article>
-        <article class="detail-card">
-          <div class="icon">⌖</div>
-          <span>Manzil</span>
-          <strong>Buxoro</strong>
-          <small>To'y marosimi o'tkaziladigan maskan</small>
-        </article>
-      </div>
-    </section>
-
-    <section class="section countdown-section">
-      <div class="section-heading">
-        <p class="eyebrow">Kutilayotgan lahzalar</p>
-        <h2>To'yimizgacha</h2>
-      </div>
-      <div class="countdown" aria-live="polite">
-        <div><strong id="days">00</strong><span>kun</span></div>
-        <div><strong id="hours">00</strong><span>soat</span></div>
-        <div><strong id="minutes">00</strong><span>daqiqa</span></div>
-        <div><strong id="seconds">00</strong><span>soniya</span></div>
-      </div>
-    </section>
-
-    <section class="section message-section">
-      <div class="ornament">✦</div>
-      <p class="quote">“Ikki qalb, bir yo'l, bir umr.”</p>
-      <p class="message">Sizning duolaringiz va ishtirokingiz bu kunimizni yanada unutilmas qiladi.</p>
-    </section>
-
-    <section class="section location-section">
-      <div class="location-card">
-        <div>
-          <p class="eyebrow">Bizni toping</p>
-          <h2>To'y manzili</h2>
-          <p>Buxoro shahridagi marosim manzilini Yandex Maps orqali ochib ko'ring.</p>
-        </div>
-        <a class="map-btn" target="_blank" rel="noopener noreferrer" href="https://yandex.uz/maps/10330/bukhara/?ll=64.458880%2C39.767739&mode=poi&poi%5Bpoint%5D=64.457796%2C39.767761&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D198231596322&z=18.96">Yandex Maps ↗</a>
-      </div>
-    </section>
-
-    <section class="section closing-section">
-      <div class="closing-card">
-        <p class="eyebrow">Sizni kutamiz</p>
-        <h2>Bobirjon <span>&</span> Moxichexrabonu</h2>
-        <p>30.09.2026 · 19:00</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>Sevgi bilan yaratilgan to'y taklifnomasi · 2026</footer>
-
-  <script>
-    const weddingDate = new Date('2026-09-30T19:00:00+05:00').getTime();
-    const pad = (n) => String(n).padStart(2, '0');
-
-    function updateCountdown() {
-      const diff = weddingDate - Date.now();
-      const values = diff > 0
-        ? {
-            days: Math.floor(diff / 86400000),
-            hours: Math.floor(diff / 3600000) % 24,
-            minutes: Math.floor(diff / 60000) % 60,
-            seconds: Math.floor(diff / 1000) % 60
-          }
-        : { days: 0, hours: 0, minutes: 0, seconds: 0 };
-
-      document.getElementById('days').textContent = pad(values.days);
-      document.getElementById('hours').textContent = pad(values.hours);
-      document.getElementById('minutes').textContent = pad(values.minutes);
-      document.getElementById('seconds').textContent = pad(values.seconds);
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
-</body>
-</html>
+<header class="topbar">
+  <a class="brand" href="#home"><span>B</span><i>&</i><span>M</span><small>30.09.2026</small></a>
+  <nav>
+    <a class="active" href="#home">Bosh sahifa</a><a href="#story">Bizning hikoyamiz</a><a href="#about">To'y haqida</a><a href="#location">Manzil</a><a href="#guests">Mehmonlarga</a><a href="#rsvp">RSVP</a>
+  </nav>
+  <div class="top-actions"><button class="music" id="musicBtn" aria-label="Musiqa"><span>♫</span> Musiqa <b></b></button><a class="important" href="#rsvp">♡ Siz biz uchun muhim­siz!</a></div>
+</header>
+<main>
+<section id="home" class="hero">
+  <div class="hero-bg"></div><div class="hero-left-quote"><p>“Ikki qalb,<br>bir yo‘l...<br>bir umrga...”</p><div class="tiny-heart">♥</div></div>
+  <div class="hero-content"><p class="bismillah">BISMILLAHIR ROHMANIR ROHIYM</p><div class="invite-label">N I K O H &nbsp; T O ‘ Y I M I Z G A<br>T A K L I F &nbsp; Q I L A M I Z</div>
+    <h1><span>Bobirjon</span><em>&amp;</em><strong>Moxichexrabonu</strong></h1><p class="hero-text">Hayotimizning eng go‘zal kunida<br>Sizni aziz mehmonimiz sifatida<br>kutib qolamiz!</p>
+    <div class="hero-meta"><div><span class="meta-icon">▣</span><b>30 SENTYABR</b><small>2026-yil</small></div><div><span class="meta-icon">◷</span><b>19:00</b><small>&nbsp;</small></div><div><span class="meta-icon">⌖</span><b>SHERBUDIN</b><small>Buxoro</small></div></div>
+    <a class="gold-btn" href="#story">Sizni kutib qolamiz! <span>→</span></a>
+  </div>
+  <div class="hero-right-quote"><p>“Sevgi —<br>bu ikki qalbning<br>bir-birini topishi,<br>balki bir-birida<br>o‘z uyini topishidir...”</p><div>♡ ── ◇ ── ♡</div></div>
+</section>
+<section class="countdown-wrap"><div class="countdown-card"><h2>To‘yimizga qolgan:</h2><div class="countdown"><div><strong id="days">00</strong><span>Kun</span></div><div><strong id="hours">00</strong><span>Soat</span></div><div><strong id="minutes">00</strong><span>Daqiqa</span></div><div><strong id="seconds">00</strong><span>Soniya</span></div></div><div class="divider-heart">──── ♥ ────</div></div></section>
+<section id="story" class="story section"><div class="story-polaroids"><figure class="polaroid photo-one"><div class="fake-photo wedding-hands"></div><figcaption>Har bir yaxshi hikoya,<br>bir uchrashuvdan boshlanadi...</figcaption></figure><figure class="polaroid photo-two"><div class="fake-photo rings"></div><figcaption>Endi esa...<br>bir umrga... ♡</figcaption></figure></div><div class="story-copy"><p class="section-kicker">Bizning hikoyamiz</p><h2>Bizning hikoyamiz</h2><div class="line-heart">── ♥ ──</div><p>Hayot bizni bir-birimiz bilan tanishtirdi...<br>Do‘stlik, hurmat va ishonch orqali sevgiga aylandi.<br>Endi esa, bu go‘zal yo‘lni bir umrga birga davom ettirish<br>niyatida, hayotimizning eng muhim qadamiga tayyormiz.</p><p>Sizning duolaringizdagi duo va mehringiz biz uchun<br>beqiyos ahamiyatga ega.</p><a class="gold-btn small" href="#about">Batafsil o‘qish <span>→</span></a></div><div class="story-script">Birga...<br>Har doim...<br>Bir umr...</div></section>
+<section id="about" class="about section"><div class="info-card"><div class="big-icon">▣</div><span>Sana</span><b>30 SENTYABR</b><small>2026-yil</small></div><div class="info-card"><div class="big-icon">◷</div><span>Vaqt</span><b>19:00</b><small>Chorshanba</small></div><div class="info-card"><div class="big-icon">⌖</div><span>Manzil</span><b>SHERBUDIN</b><small>Buxoro, Abduxoliq G‘ijduvoniy mahallasi,<br>Bahouddin Naqshband ko‘chasi</small></div><div class="info-card"><div class="big-icon">♧</div><span>To‘y turi</span><b>Nikoh to‘yi</b><small>Aziz mehmonlar bilan</small></div></section>
+<section id="location" class="location section"><div class="section-title"><p class="section-kicker">Bizni toping</p><h2>Manzil</h2><div class="line-heart">── ♥ ──</div><p>Sizni mana shu manzilda kutib qolamiz!</p></div><div class="location-grid"><div class="map-box"><iframe title="Sherbudin — Yandex Maps" src="https://yandex.uz/map-widget/v1/?ll=64.458880%2C39.767739&mode=search&oid=198231596322&ol=biz&z=18.96" loading="lazy"></iframe><a class="gold-btn map-btn" target="_blank" rel="noopener noreferrer" href="https://yandex.uz/maps/10330/bukhara/?ll=64.458880%2C39.767739&mode=poi&poi%5Bpoint%5D=64.457796%2C39.767761&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D198231596322&z=18.96">▣ Yandex Maps’da ochish</a></div><div class="venue"><img src="https://avatars.mds.yandex.net/get-altay/1594075/2a0000016f5efe17e2cf4a0ab17961f227ce/XXL_height" alt="Sherbudin banket zali, Buxoro"><div class="venue-caption">“Ajoyib lahzalar, unutilmas xotiralar...”</div></div></div></section>
+<section id="guests" class="guest-banner"><div class="guest-content"><p class="section-kicker light">Mehmonlarga</p><h2>Sizning tashrifingiz biz uchun katta baxt!</h2><p>Iltimos, quyidagi tugma orqali kelishingizni tasdiqlang.</p><a class="outline-btn" href="#rsvp">✓ &nbsp; Tashrifingizni tasdiqlash<br><small>(RSVP)</small></a></div><div class="signature"><p>Yaxshi niyatlar bilan,</p><strong>Bobirjon &amp; Moxichexrabonu</strong><span>♡</span></div></section>
+<section id="rsvp" class="footer-quote"><p>“Baxt — bu uni ulashganingizda yanada go‘zal bo‘ladi...”</p><div>────────── ♥ ──────────</div><span>Buxoro &nbsp;|&nbsp; 30.09.2026</span></section>
+</main>
+<script>
+const weddingDate=new Date('2026-09-30T19:00:00+05:00').getTime(),pad=n=>String(n).padStart(2,'0');function tick(){const d=Math.max(0,weddingDate-Date.now());document.querySelector('#days').textContent=Math.floor(d/86400000);document.querySelector('#hours').textContent=pad(Math.floor(d/3600000)%24);document.querySelector('#minutes').textContent=pad(Math.floor(d/60000)%60);document.querySelector('#seconds').textContent=pad(Math.floor(d/1000)%60)}tick();setInterval(tick,1000);document.querySelector('#musicBtn').addEventListener('click',()=>document.querySelector('#musicBtn').classList.toggle('on'));
+</script>
+</body></html>
